@@ -1,17 +1,76 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
   font-family: Arial;
-  text-align: center;
   background: #1e1e1e;
   color: white;
+  text-align: center;
+  padding: 50px 10px;
+}
+.container {
+  max-width: 900px;
+  margin: auto;
+}
+#players {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.player {
+  background: #2c2c2c;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+.player.inactive {
+  opacity: 0.5;
+}
+.player.barrel {
+  border: 2px solid #ff0;
+}
+#currentPlayer {
+  font-size: 20px;
+  margin: 10px 0;
 }
 .dice {
-  font-size: 40px;
-  margin: 10px;
+  font-size: 48px;
+  margin: 15px 0;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.dice span {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background: #333;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+.dice span.inactive {
+  opacity: 0.3;
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
 }
 button {
-  padding: 10px 20px;
-  margin: 10px;
+  padding: 12px 20px;
   font-size: 16px;
+  border: none;
+  border-radius: 10px;
   cursor: pointer;
 }
 button:disabled {
@@ -19,11 +78,51 @@ button:disabled {
   cursor: not-allowed;
 }
 .log {
-  max-width: 500px;
-  margin: 20px auto;
-  text-align: left;
+  margin-top: 15px;
   background: #2c2c2c;
   padding: 10px;
-  height: 250px;
+  border-radius: 10px;
+  height: 200px;
   overflow-y: auto;
+  text-align: left;
+  font-size: 14px;
+}
+#setup input {
+  /* padding: 10px; */
+  /* font-size: 16px; */
+  /* width: 60%; */
+  /* max-width: 250px; */
+}
+#playerList {
+  margin-top: 10px;
+}
+#playerName{
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+@media (max-width: 600px) {
+  body{
+    padding: 20px 10px;
+  }
+  .dice {
+    font-size: 36px;
+  }
+  button {
+    width: 100%;
+    font-size: 18px;
+  }
+  .player {
+    width: 100%;
+    text-align: left;
+  }
+  .log {
+    height: 150px;
+    font-size: 12px;
+  }
+  #playerName{
+    width: 100%;
+    max-width: none;
+  }
 }
