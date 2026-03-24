@@ -1,0 +1,29 @@
+body {
+  font-family: Arial;
+  text-align: center;
+  background: #1e1e1e;
+  color: white;
+}
+.dice {
+  font-size: 40px;
+  margin: 10px;
+}
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.log {
+  max-width: 500px;
+  margin: 20px auto;
+  text-align: left;
+  background: #2c2c2c;
+  padding: 10px;
+  height: 250px;
+  overflow-y: auto;
+}

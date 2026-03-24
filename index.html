@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Игра 1000</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>🎲 Игра 1000</h1>
+<div id="players"></div>
+<h2 id="currentPlayer"></h2>
+
+<div id="dice" class="dice">– – – – –</div>
+<p>Очки за ход: <span id="turnScore">0</span></p>
+
+<button onclick="roll()">🎲 Бросить</button>
+<button onclick="takeScore()">💰 Забрать</button>
+
+<div class="log" id="log"></div>
+
+<script src="./script.js"></script>
+
+</body>
+</html>
